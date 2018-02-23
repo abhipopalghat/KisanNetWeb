@@ -10,8 +10,8 @@ public class UserProfile {
 	public static By viewAllChannels = By.cssSelector("a[class='mrgn-b-md font-bold-four text-uppercase']");
 	
 	
-	public static void clickEditProfileBtn() {
-		BaseClass.waitTillElementPresent(BaseClass.driver, editProfileButton);    
+	public static void clickEditProfileBtn() throws Exception {
+		BaseClass.waitTillElementPresent(BaseClass.driver, editProfileButton);   
     	BaseClass.driver.findElement(editProfileButton).click();
 	}
 	
@@ -20,3 +20,4 @@ public class UserProfile {
     	BaseClass.driver.findElement(closeButton).click();
 	}
 }
+ 

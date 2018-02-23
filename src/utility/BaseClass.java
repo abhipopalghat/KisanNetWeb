@@ -88,7 +88,9 @@ public class BaseClass
 		Thread.sleep(2000);
 		LoginPage.clickEnterMobile();
 		LoginPage.switchToIFrame();
+		LoginPage.selectCountry();
 		LoginPage.setEnterMobileFacebook();
+		//LoginPage.selectCountry();
 		LoginPage.clickNext();
 		LoginPage.clickContinue();
 			

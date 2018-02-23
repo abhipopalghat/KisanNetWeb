@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="testCases.EditUserProfile">
+      <class name="testCases.RegisterUser_TC">
         <methods>
-          <include name="editUSerProfile"/>
+          <include name="beforeRegister_TC"/>
+          <include name="execute_RegisterUser_TC"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- testCases.EditUserProfile -->
+      </class> <!-- testCases.RegisterUser_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -36,5 +36,11 @@
 			<class name="testCases.EditUserProfile"></class>
 		</classes>
 	</test>
+	
+	<test name = "ChangeLanguage">
+		<classes>
+			<class name="testCases.ChangeLanguage"></class>
+		</classes>
+	</test>
 		
 </suite>

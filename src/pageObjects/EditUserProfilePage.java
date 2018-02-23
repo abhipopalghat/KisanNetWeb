@@ -1,10 +1,6 @@
 package pageObjects;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import utility.BaseClass;
 import utility.FileUpload;
 
@@ -20,7 +16,7 @@ public class EditUserProfilePage {
 	public static By imgUploadMethod = By.cssSelector("div[class= 'mat-menu-content ng-trigger ng-trigger-fadeInItems']");
 	public static By addMore = By.partialLinkText("ADD MORE");
 	public static By interestsList = By.cssSelector("mat-list[class='filterList mat-list']");
-	
+	public static By profileUpdateToast = By.cssSelector("div[class='toast-bottom-right toast-container']");
 	
 	public static void clickcloseBtn() {
 		BaseClass.waitTillElementPresent(BaseClass.driver, closeButton);    
@@ -66,6 +62,13 @@ public class EditUserProfilePage {
 	public static void clickAddMoreBtn() {
 		BaseClass.waitTillElementPresent(BaseClass.driver, addMore);    
     	BaseClass.driver.findElement(addMore).click();
+	}
+	
+	public static String getSuccessToast() {
+		BaseClass.waitTillElementPresent(BaseClass.driver, profileUpdateToast);
+		String successToast= BaseClass.driver.findElement(profileUpdateToast).getText();
+		return successToast;
+    	
 	}
 	
 }

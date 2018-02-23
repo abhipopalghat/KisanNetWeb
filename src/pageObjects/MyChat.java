@@ -15,6 +15,7 @@ public class MyChat {
 	public static By channelList= By.cssSelector("span[class='limitChannelName']");
 	
 	
+	
 	public static void clickdiscoverIcon() throws Exception {
 		Thread.sleep(3000);
 		BaseClass.waitTillElementVisible(BaseClass.driver, discoverIcon);    

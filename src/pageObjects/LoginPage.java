@@ -1,9 +1,11 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 
 import utility.BaseClass;
 
@@ -13,8 +15,11 @@ public class LoginPage {
 	public static By enterMobileFacebook= By.cssSelector("input[name='phone_number']");
 	public static By enterMobileKisan= By.xpath("//*[@id=\"mat-input-0\"]");
 	public static By iframe=By.xpath("/html/body/div[1]/iframe");
-	public static By next=By.xpath("//*[@id=\"u_0_9\"]");
+	public static By next=By.cssSelector("button[type='submit']");
 	public static By continueFacebook=By.xpath("//*[@id=\"u_0_4\"]");
+	public static By selectCountry = By.cssSelector("div[class='_2njo _developerAccountKit__inputBorderColor _65j8']");
+	public static By countryList = By.cssSelector("ul[class='_2njr']");
+	public static By india= By.cssSelector("div[data-tooltip-content='India']");
 	
 	
 //Return enterMobileiframe textbox
@@ -30,8 +35,7 @@ public class LoginPage {
     public static void setEnterMobileFacebook(){
 
         String mobileNumber=BaseClass.prop.getProperty("mobileNumber");
-    	BaseClass bs= new BaseClass();
-        bs.enter_Text(enterMobileFacebook, mobileNumber);
+    	BaseClass.enter_Text(enterMobileFacebook, mobileNumber);
     	BaseClass.waitTillElementVisible(BaseClass.driver, enterMobileFacebook);
         BaseClass.driver.findElement(enterMobileFacebook).click();
             	
@@ -61,9 +65,7 @@ public class LoginPage {
  public static void switchToParrentFrame() throws Exception {
     	
     	Thread.sleep(10000);
-    	WebElement facebooAuth= BaseClass.driver.findElement(iframe);      //Find iframe
- 		BaseClass.driver.switchTo().parentFrame();
-		
+    	BaseClass.driver.switchTo().parentFrame();
     }
     
     
@@ -83,5 +85,28 @@ public class LoginPage {
     	BaseClass.waitTillElementClickable(BaseClass.driver, continueFacebook);
     	BaseClass.driver.findElement(continueFacebook).click();
     }
+    
+    public static void selectCountry() throws Exception {
+    	
+    	//BaseClass.waitTillElementPresent(BaseClass.driver, selectCountry);
+    	BaseClass.driver.findElement(selectCountry).click();
+    	JavascriptExecutor scroll = (JavascriptExecutor)BaseClass.driver;
+    	scroll.executeScript("arguments[0].scrollIntoView(true);", BaseClass.driver.findElement(india));
+    	Thread.sleep(3000);
+    	BaseClass.driver.findElement(india).click();
+    	
+    	/*List<WebElement> countries = BaseClass.driver.findElements(countryList);
+    	System.out.println(countries.size());
+    	
+    	for(WebElement country : countries) {
+    		System.out.println(country.getText());
+    		if (country.getText().equalsIgnoreCase("Albania")) {
+    			country.click();
+    			break;
+			}
+    		//System.out.println(country.getText());
+    		
+    	}*/
+  }
 	
 }

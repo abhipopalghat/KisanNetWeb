@@ -11,7 +11,7 @@ import utility.FileUpload;
 
 public class SendImageToFollower {
   @Test
-  public void SendImage() throws Exception {
+  public void sendImage() throws Exception {
 	  MyChat.getChannelList();
 	  MyChat.clickOnChannelName();
 	  ChatWindow.clickAttachmentPinIcon();

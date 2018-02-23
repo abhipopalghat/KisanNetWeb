@@ -1,8 +1,5 @@
 package pageObjects;
 
-import java.util.List;
-
-import org.apache.commons.lang3.ObjectUtils.Null;
 import org.openqa.selenium.By;
 
 import utility.BaseClass;
@@ -27,7 +24,7 @@ public class Categories {
 	public static By alternateEnergyCategory = By.cssSelector("img[src='https://s3.ap-south-1.amazonaws.com/kisan-common/oauth-categories/alternate_energy.jpg']");
 	
 	
-	public static By next = By.linkText("NEXT");
+	public static By next = By.cssSelector("a[class='text-uppercase text-right widthfull']");
 	public static By back = By.cssSelector("i[class='zmdi zmdi-arrow-left']");
 	
 
@@ -293,20 +290,11 @@ public class Categories {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 //Return next button
 	
     public static By btn_Next(){
 
-    	BaseClass.waitTillElementClickable(BaseClass.driver, next);	
+    	BaseClass.waitTillElementVisible(BaseClass.driver, next);	
     	return next;  
     	
     }	
@@ -316,7 +304,7 @@ public class Categories {
 	
 	public static void clickNext()
 	{
-		BaseClass.waitTillElementClickable(BaseClass.driver, next);
+		BaseClass.waitTillElementVisible(BaseClass.driver, next);
 		BaseClass.driver.findElement(next).click();
 	}
 	

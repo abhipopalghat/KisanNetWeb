@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.util.Properties;
-
 import org.openqa.selenium.By;
 
 import utility.BaseClass;

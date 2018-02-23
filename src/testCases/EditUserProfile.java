@@ -1,5 +1,7 @@
 package testCases;
 
+import static org.junit.Assert.assertTrue;
+
 import org.testng.annotations.Test;
 
 import pageObjects.Categories;
@@ -13,6 +15,7 @@ public class EditUserProfile {
 	  
 	  LeftDrawer.clickLeftDrawerBtn();
 	  LeftDrawer.clickUserProfileImage();
+	  Thread.sleep(3000);
 	  UserProfile.clickEditProfileBtn();
 	  
 	  EditUserProfilePage.uploadProfilePic();
@@ -28,6 +31,9 @@ public class EditUserProfile {
 	  Categories.selectAlternate_EnergyCategory();
 	  Categories.clickNext();
 	  EditUserProfilePage.clickDoneBtn();
-	  
+	  Thread.sleep(3000);
+	  /*String getSuccessToast = EditUserProfilePage.getSuccessToast();
+	  System.out.println(getSuccessToast);
+	  */
   }
 }

@@ -13,7 +13,7 @@ public class CreateChannel {
   
 	
 	@Test
-  public void CreateChannel() throws Exception {
+  public void createChannel() throws Exception {
 		
 		// Click on Start your channel from left drawer
 		LeftDrawer.clickLeftDrawerBtn();
