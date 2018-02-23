@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Kisan_Net_Web_Automation" duration-ms="99189" started-at="2018-02-22T18:18:14Z" finished-at="2018-02-22T18:19:54Z">
+    <groups>
+    </groups>
+    <test name="LoginTest" duration-ms="24840" started-at="2018-02-22T18:18:14Z" finished-at="2018-02-22T18:18:39Z">
+      <class name="testCases.RegisterUser_TC">
+        <test-method status="PASS" signature="execute_RegisterUser_TC()[pri:0, instance:testCases.RegisterUser_TC@2344fc66]" name="execute_RegisterUser_TC" duration-ms="24807" started-at="2018-02-22T18:18:14Z" finished-at="2018-02-22T18:18:39Z">
+        </test-method> <!-- execute_RegisterUser_TC -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.RegisterUser_TC@2344fc66]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-02-22T18:18:39Z" finished-at="2018-02-22T18:18:39Z">
+        </test-method> <!-- afterTest -->
+      </class> <!-- testCases.RegisterUser_TC -->
+    </test> <!-- LoginTest -->
+    <test name="CreateChannel" duration-ms="19006" started-at="2018-02-22T18:18:39Z" finished-at="2018-02-22T18:18:58Z">
+      <class name="testCases.CreateChannel">
+        <test-method status="PASS" signature="CreateChannel()[pri:0, instance:testCases.CreateChannel@56f4468b]" name="CreateChannel" duration-ms="17671" started-at="2018-02-22T18:18:39Z" finished-at="2018-02-22T18:18:57Z">
+        </test-method> <!-- CreateChannel -->
+        <test-method status="PASS" signature="navigateToMyChat()[pri:0, instance:testCases.CreateChannel@56f4468b]" name="navigateToMyChat" is-config="true" duration-ms="1330" started-at="2018-02-22T18:18:57Z" finished-at="2018-02-22T18:18:58Z">
+        </test-method> <!-- navigateToMyChat -->
+      </class> <!-- testCases.CreateChannel -->
+    </test> <!-- CreateChannel -->
+    <test name="FollowChannel" duration-ms="11943" started-at="2018-02-22T18:18:58Z" finished-at="2018-02-22T18:19:10Z">
+      <class name="testCases.FollowChannel">
+        <test-method status="PASS" signature="followChannel()[pri:0, instance:testCases.FollowChannel@51efea79]" name="followChannel" duration-ms="11939" started-at="2018-02-22T18:18:58Z" finished-at="2018-02-22T18:19:10Z">
+        </test-method> <!-- followChannel -->
+      </class> <!-- testCases.FollowChannel -->
+    </test> <!-- FollowChannel -->
+    <test name="SendTextToFollower" duration-ms="5448" started-at="2018-02-22T18:19:10Z" finished-at="2018-02-22T18:19:16Z">
+      <class name="testCases.SendTextToFollower">
+        <test-method status="PASS" signature="SendText()[pri:0, instance:testCases.SendTextToFollower@58651fd0]" name="SendText" duration-ms="4159" started-at="2018-02-22T18:19:10Z" finished-at="2018-02-22T18:19:14Z">
+        </test-method> <!-- SendText -->
+        <test-method status="PASS" signature="navigateToMyChat()[pri:0, instance:testCases.SendTextToFollower@58651fd0]" name="navigateToMyChat" is-config="true" duration-ms="1286" started-at="2018-02-22T18:19:14Z" finished-at="2018-02-22T18:19:16Z">
+        </test-method> <!-- navigateToMyChat -->
+      </class> <!-- testCases.SendTextToFollower -->
+    </test> <!-- SendTextToFollower -->
+    <test name="SendImageToFollower" duration-ms="18065" started-at="2018-02-22T18:19:16Z" finished-at="2018-02-22T18:19:34Z">
+      <class name="testCases.SendImageToFollower">
+        <test-method status="PASS" signature="SendImage()[pri:0, instance:testCases.SendImageToFollower@7c16905e]" name="SendImage" duration-ms="16731" started-at="2018-02-22T18:19:16Z" finished-at="2018-02-22T18:19:32Z">
+        </test-method> <!-- SendImage -->
+        <test-method status="PASS" signature="navigateToMyChat()[pri:0, instance:testCases.SendImageToFollower@7c16905e]" name="navigateToMyChat" is-config="true" duration-ms="1328" started-at="2018-02-22T18:19:32Z" finished-at="2018-02-22T18:19:34Z">
+        </test-method> <!-- navigateToMyChat -->
+      </class> <!-- testCases.SendImageToFollower -->
+    </test> <!-- SendImageToFollower -->
+    <test name="EditUserProfile" duration-ms="19827" started-at="2018-02-22T18:19:34Z" finished-at="2018-02-22T18:19:54Z">
+      <class name="testCases.RegisterUser_TC">
+        <test-method status="PASS" signature="beforeRegister_TC()[pri:0, instance:testCases.RegisterUser_TC@2344fc66]" name="beforeRegister_TC" is-config="true" duration-ms="40827" started-at="2018-02-22T18:17:34Z" finished-at="2018-02-22T18:18:14Z">
+        </test-method> <!-- beforeRegister_TC -->
+      </class> <!-- testCases.RegisterUser_TC -->
+      <class name="testCases.EditUserProfile">
+        <test-method status="PASS" signature="editUSerProfile()[pri:0, instance:testCases.EditUserProfile@482f8f11]" name="editUSerProfile" duration-ms="19824" started-at="2018-02-22T18:19:34Z" finished-at="2018-02-22T18:19:54Z">
+        </test-method> <!-- editUSerProfile -->
+      </class> <!-- testCases.EditUserProfile -->
+    </test> <!-- EditUserProfile -->
+  </suite> <!-- Kisan_Net_Web_Automation -->
+</testng-results>

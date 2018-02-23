@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [automationTest]">
+  <test name="loginTest(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.EditUserProfile">
+        <methods>
+          <include name="editUSerProfile"/>
+        </methods>
+      </class> <!-- testCases.EditUserProfile -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- loginTest(failed) -->
+</suite> <!-- Failed suite [automationTest] -->

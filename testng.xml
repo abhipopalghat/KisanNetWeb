@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name =  "Kisan_Net_Web_Automation">
+	<test name = "LoginTest">
+		<classes>
+			<class name="testCases.RegisterUser_TC"></class>
+		</classes>
+	</test>
+	
+	<test name = "CreateChannel">
+		<classes>
+			<class name="testCases.CreateChannel"></class>
+		</classes>
+	</test>
+	
+	<test name = "FollowChannel">
+		<classes>
+			<class name="testCases.FollowChannel"></class>
+		</classes>
+	</test>
+	
+	<test name = "SendTextToFollower">
+		<classes>
+			<class name="testCases.SendTextToFollower"></class>
+		</classes>
+	</test>
+	
+	<test name = "SendImageToFollower">
+		<classes>
+			<class name="testCases.SendImageToFollower"></class>
+		</classes>
+	</test>
+	
+	<test name = "EditUserProfile">
+		<classes>
+			<class name="testCases.EditUserProfile"></class>
+		</classes>
+	</test>
+		
+</suite>
