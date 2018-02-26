@@ -15,7 +15,7 @@ public class EditUserProfile {
 	  
 	  LeftDrawer.clickLeftDrawerBtn();
 	  LeftDrawer.clickUserProfileImage();
-	  Thread.sleep(3000);
+	  Thread.sleep(2000);
 	  UserProfile.clickEditProfileBtn();
 	  
 	  EditUserProfilePage.uploadProfilePic();

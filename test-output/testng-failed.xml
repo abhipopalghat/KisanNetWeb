@@ -1,64 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Kisan_Net_Web_Automation]">
-  <test name="EditUserProfile(failed)" preserve-order="true">
+  <test name="LoginTest(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+          <include name="execute_RegisterUser_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test name="CreateChannel(failed)" preserve-order="true">
     <classes>
       <class name="testCases.CreateChannel">
         <methods>
-          <include name="navigateToMyChat"/>
+          <include name="createPvtChannel"/>
+          <include name="createPubChannel"/>
         </methods>
       </class> <!-- testCases.CreateChannel -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- CreateChannel(failed) -->
+  <test name="FollowChannel(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.FollowChannel">
+        <methods>
+          <include name="followChannel"/>
+        </methods>
+      </class> <!-- testCases.FollowChannel -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- FollowChannel(failed) -->
+  <test name="SendTextToFollower(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.SendTextToFollower">
+        <methods>
+          <include name="SendText"/>
+        </methods>
+      </class> <!-- testCases.SendTextToFollower -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- SendTextToFollower(failed) -->
+  <test name="SendImageToFollower(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.SendImageToFollower">
+        <methods>
+          <include name="sendImage"/>
+        </methods>
+      </class> <!-- testCases.SendImageToFollower -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- SendImageToFollower(failed) -->
+  <test name="EditUserProfile(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
       <class name="testCases.EditUserProfile">
         <methods>
           <include name="editUSerProfile"/>
         </methods>
       </class> <!-- testCases.EditUserProfile -->
-      <class name="testCases.SendTextToFollower">
-        <methods>
-          <include name="navigateToMyChat"/>
-        </methods>
-      </class> <!-- testCases.SendTextToFollower -->
-      <class name="testCases.RegisterUser_TC">
-        <methods>
-          <include name="beforeRegister_TC"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- testCases.RegisterUser_TC -->
-      <class name="testCases.SendImageToFollower">
-        <methods>
-          <include name="navigateToMyChat"/>
-        </methods>
-      </class> <!-- testCases.SendImageToFollower -->
     </classes>
   </test> <!-- EditUserProfile(failed) -->
   <test name="ChangeLanguage(failed)" preserve-order="true">
     <classes>
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
       <class name="testCases.ChangeLanguage">
         <methods>
           <include name="changeLanguage"/>
         </methods>
       </class> <!-- testCases.ChangeLanguage -->
-      <class name="testCases.CreateChannel">
+    </classes>
+  </test> <!-- ChangeLanguage(failed) -->
+  <test name="SendTextToAdmin(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.SendTextToAdmin">
         <methods>
-          <include name="navigateToMyChat"/>
+          <include name="SendText"/>
         </methods>
-      </class> <!-- testCases.CreateChannel -->
-      <class name="testCases.SendTextToFollower">
-        <methods>
-          <include name="navigateToMyChat"/>
-        </methods>
-      </class> <!-- testCases.SendTextToFollower -->
+      </class> <!-- testCases.SendTextToAdmin -->
       <class name="testCases.RegisterUser_TC">
         <methods>
           <include name="beforeRegister_TC"/>
-          <include name="afterTest"/>
         </methods>
       </class> <!-- testCases.RegisterUser_TC -->
-      <class name="testCases.SendImageToFollower">
-        <methods>
-          <include name="navigateToMyChat"/>
-        </methods>
-      </class> <!-- testCases.SendImageToFollower -->
     </classes>
-  </test> <!-- ChangeLanguage(failed) -->
+  </test> <!-- SendTextToAdmin(failed) -->
+  <test name="SendImageToAdmin(failed)" preserve-order="true">
+    <classes>
+      <class name="testCases.SendImageToAdmin">
+        <methods>
+          <include name="sendImage"/>
+        </methods>
+      </class> <!-- testCases.SendImageToAdmin -->
+      <class name="testCases.RegisterUser_TC">
+        <methods>
+          <include name="beforeRegister_TC"/>
+        </methods>
+      </class> <!-- testCases.RegisterUser_TC -->
+    </classes>
+  </test> <!-- SendImageToAdmin(failed) -->
 </suite> <!-- Failed suite [Kisan_Net_Web_Automation] -->

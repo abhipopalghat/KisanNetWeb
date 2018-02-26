@@ -42,5 +42,17 @@
 			<class name="testCases.ChangeLanguage"></class>
 		</classes>
 	</test>
+	
+	<test name = "SendTextToAdmin">
+		<classes>
+			<class name="testCases.SendTextToAdmin"></class>
+		</classes>
+	</test>
+	
+	<test name = "SendImageToAdmin">
+		<classes>
+			<class name="testCases.SendImageToAdmin"></class>
+		</classes>
+	</test>
 		
 </suite>

@@ -16,6 +16,7 @@ public class ChatWindow {
 	public static By sendButton = By.cssSelector("button[type='submit']");
 	public static By attachmentPinOptions = By.cssSelector("button[class='mat-menu-item']");
 	public static By sendImageSubmitButton = By.cssSelector("a[class='borderCircle text-center mat-fab']");
+	public static By chatWithAdminButton = By.cssSelector("a[class='text-center mat-fab']");
 	
 	public static void clickSendMessageTextBox() {
 		BaseClass.waitTillElementVisible(BaseClass.driver, sendMessageTextBox);    
@@ -23,12 +24,11 @@ public class ChatWindow {
 	}
 	
 	public static void enterMessage() {
-		//BaseClass.waitTillElementPresent(BaseClass.driver, sendMessageTextBox);
 		String textMessage = BaseClass.prop.getProperty("TextMessage");
 		BaseClass.enter_Text(sendMessageTextBox, textMessage);
 	}
 	
-	public static void clickSendButton() {
+	public static void clickSendBtn() {
 		BaseClass.waitTillElementPresent(BaseClass.driver, sendButton);    
     	BaseClass.driver.findElement(sendButton).click();
 		
@@ -78,10 +78,15 @@ public class ChatWindow {
 		}
 	}
 	
-	public static void clickSendImageSubmitButton() {
+	public static void clickSendImageSubmitBtn() {
 		BaseClass.waitTillElementClickable(BaseClass.driver,sendImageSubmitButton);    
     	BaseClass.driver.findElement(sendImageSubmitButton).click();
 		
+	}
+	
+	public static void clickChatWithAdminBtn() {
+		BaseClass.waitTillElementVisible(BaseClass.driver, chatWithAdminButton);    
+    	BaseClass.driver.findElement(chatWithAdminButton).click();
 	}
 	
 }

@@ -14,7 +14,8 @@ public class EditUserProfilePage {
 	public static By takePhoto = By.cssSelector("#cdk-overlay-11 > div > div > button:nth-child(1) > a");
 	public static By uploadPhoto = By.xpath("//div/button[2]");
 	public static By imgUploadMethod = By.cssSelector("div[class= 'mat-menu-content ng-trigger ng-trigger-fadeInItems']");
-	public static By addMore = By.partialLinkText("ADD MORE");
+	//public static By addMore = By.partialLinkText("ADD MORE");
+	public static By addMore = By.cssSelector("a.text-uppercase:nth-child(1)");
 	public static By interestsList = By.cssSelector("mat-list[class='filterList mat-list']");
 	public static By profileUpdateToast = By.cssSelector("div[class='toast-bottom-right toast-container']");
 	
@@ -59,8 +60,9 @@ public class EditUserProfilePage {
 		FileUpload.ClickEnter();
     }
 	
-	public static void clickAddMoreBtn() {
-		BaseClass.waitTillElementPresent(BaseClass.driver, addMore);    
+	public static void clickAddMoreBtn() throws Exception {
+		BaseClass.waitTillElementPresent(BaseClass.driver, addMore);
+		Thread.sleep(1000);
     	BaseClass.driver.findElement(addMore).click();
 	}
 	

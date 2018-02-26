@@ -88,25 +88,12 @@ public class LoginPage {
     
     public static void selectCountry() throws Exception {
     	
-    	//BaseClass.waitTillElementPresent(BaseClass.driver, selectCountry);
     	BaseClass.driver.findElement(selectCountry).click();
     	JavascriptExecutor scroll = (JavascriptExecutor)BaseClass.driver;
     	scroll.executeScript("arguments[0].scrollIntoView(true);", BaseClass.driver.findElement(india));
     	Thread.sleep(3000);
     	BaseClass.driver.findElement(india).click();
-    	
-    	/*List<WebElement> countries = BaseClass.driver.findElements(countryList);
-    	System.out.println(countries.size());
-    	
-    	for(WebElement country : countries) {
-    		System.out.println(country.getText());
-    		if (country.getText().equalsIgnoreCase("Albania")) {
-    			country.click();
-    			break;
-			}
-    		//System.out.println(country.getText());
-    		
-    	}*/
+  
   }
 	
 }

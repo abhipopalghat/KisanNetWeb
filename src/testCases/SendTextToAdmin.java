@@ -1,6 +1,5 @@
 package testCases;
 
-import org.apache.http.message.LineFormatter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
@@ -8,19 +7,20 @@ import pageObjects.ChatWindow;
 import pageObjects.LeftDrawer;
 import pageObjects.MyChat;
 
-public class SendTextToFollower {
+public class SendTextToAdmin {
   @Test
-  public void SendText() throws Exception {
+public void SendText() throws Exception {
 	  
 	  MyChat.getChannelList();
-	  MyChat.clickOnChannelName("AdminsChannel");
+	  MyChat.clickOnChannelName("FollowersChannel");
+	  ChatWindow.clickChatWithAdminBtn();
 	  ChatWindow.clickSendMessageTextBox();
 	  ChatWindow.enterMessage();
 	  ChatWindow.clickSendBtn();
 	  Thread.sleep(2000);
-	  LeftDrawer.clickLeftDrawerBtn();
+	 /* LeftDrawer.clickLeftDrawerBtn();
 	  LeftDrawer.clickMyChats();
-	  Thread.sleep(1000);
+	  Thread.sleep(1000);*/
   }
   
   @AfterClass

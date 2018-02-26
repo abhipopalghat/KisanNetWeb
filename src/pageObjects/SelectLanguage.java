@@ -24,8 +24,9 @@ public class SelectLanguage {
 //Select English language
 
     public static void clickEnglish(){
-
-            BaseClass.driver.findElement(english).click();
+    		
+        BaseClass.waitTillElementPresent(BaseClass.driver, english);    
+    	BaseClass.driver.findElement(english).click();
 
     }
     
@@ -44,7 +45,8 @@ public class SelectLanguage {
     
     public static void clickMarathi(){
 
-            BaseClass.driver.findElement(marathi).click();
+    	BaseClass.waitTillElementPresent(BaseClass.driver, marathi);   
+    	BaseClass.driver.findElement(marathi).click();
 
     }
     
@@ -62,9 +64,31 @@ public class SelectLanguage {
 
     public static void clickHindi(){
 
-            BaseClass.driver.findElement(hindi).click();
+    	BaseClass.waitTillElementPresent(BaseClass.driver, hindi);  
+    	BaseClass.driver.findElement(hindi).click();
 
     }
     
+    public static void changeLanguage(String language) {
+  	   	   	  
+  	switch (language) {
+  	
+  	case "English":
+  		SelectLanguage.clickEnglish();
+  		break;
+  		
+  	case "Hindi":
+  		SelectLanguage.clickHindi();
+  		break;
+  		
+  	case "Marathi":
+  		SelectLanguage.clickMarathi();;
+  		break;
+
+  	default:
+  		break;
+  	}
+  }
+   
 
 }

@@ -13,21 +13,6 @@ public class ChangeLanguage {
 	  BaseClass.waitTillElementClickable(BaseClass.driver, LeftDrawer.leftDrawerBtn);
 	  LeftDrawer.clickLeftDrawerBtn();
 	  LeftDrawer.clickLanguage();
-	  switch (language) {
-	case "English":
-		SelectLanguage.clickEnglish();
-		break;
-		
-	case "Hindi":
-		SelectLanguage.clickHindi();
-		break;
-		
-	case "Marathi":
-		SelectLanguage.clickMarathi();;
-		break;
-
-	default:
-		break;
-	}
+	  SelectLanguage.changeLanguage(language);
   }
 }

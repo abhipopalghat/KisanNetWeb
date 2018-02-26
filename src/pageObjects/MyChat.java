@@ -38,10 +38,10 @@ public class MyChat {
 		return Channels;
 	}
 	
-	public static void clickOnChannelName() {
+	public static void clickOnChannelName(String channelType) {
 		
 		List <WebElement> Channels = getChannelList();
-		String channelToBeClicked = BaseClass.prop.getProperty("AdminsChannel");
+		String channelToBeClicked = BaseClass.prop.getProperty(channelType);
 		for(WebElement channelName : Channels) {
 			
 			if(	channelName.getText().equalsIgnoreCase(channelToBeClicked)) {

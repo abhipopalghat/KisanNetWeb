@@ -90,7 +90,6 @@ public class BaseClass
 		LoginPage.switchToIFrame();
 		LoginPage.selectCountry();
 		LoginPage.setEnterMobileFacebook();
-		//LoginPage.selectCountry();
 		LoginPage.clickNext();
 		LoginPage.clickContinue();
 			

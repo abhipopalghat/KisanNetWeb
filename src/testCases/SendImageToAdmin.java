@@ -4,23 +4,26 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import pageObjects.ChatWindow;
-import pageObjects.LeftDrawer;
 import pageObjects.MyChat;
 import utility.BaseClass;
 import utility.FileUpload;
 
-public class SendImageToFollower {
+public class SendImageToAdmin {
   @Test
   public void sendImage() throws Exception {
 	  MyChat.getChannelList();
-	  MyChat.clickOnChannelName("AdminsChannel");
+	  MyChat.clickOnChannelName("FollowersChannel");
 	  ChatWindow.clickAttachmentPinIcon();
 	  ChatWindow.selectAttachmentPinOption("Image");
 	  Thread.sleep(1000);
-	  FileUpload.CopyFilePath("sendImageInChannel");
+	
+	  //Uncomment the code when proper implementation is done
+	  
+	  /* FileUpload.CopyFilePath("sendImageInChannel");
 	  FileUpload.PasteFilePath();
 	  FileUpload.ClickEnter();
-	  ChatWindow.clickSendImageSubmitBtn();
+	  ChatWindow.clickSendImageSubmitBtn();*/
+	  BaseClass.driver.navigate().refresh(); // comment this line when feature is done
 	  Thread.sleep(2000);
   }
   
