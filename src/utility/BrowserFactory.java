@@ -40,7 +40,7 @@ public class BrowserFactory {
 			
 			System.setProperty("webdriver.gecko.driver", BaseClass.prop.getProperty("geckoDriver"));
 			BaseClass.driver = new FirefoxDriver();
-			String kisanbaseUrl=	BaseClass.prop.getProperty("baseUrl");	
+			String kisanbaseUrl= BaseClass.prop.getProperty("baseUrl");	
 			BaseClass.driver.get(kisanbaseUrl);
 			break;
 

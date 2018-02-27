@@ -19,7 +19,7 @@ public class EditUserProfilePage {
 	public static By interestsList = By.cssSelector("mat-list[class='filterList mat-list']");
 	public static By profileUpdateToast = By.cssSelector("div[class='toast-bottom-right toast-container']");
 	
-	public static void clickcloseBtn() {
+	public static void clickCloseBtn() {
 		BaseClass.waitTillElementPresent(BaseClass.driver, closeButton);    
     	BaseClass.driver.findElement(closeButton).click();
 	}

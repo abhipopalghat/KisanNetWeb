@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utility.BaseClass;
 
@@ -17,6 +19,8 @@ public class ChatWindow {
 	public static By attachmentPinOptions = By.cssSelector("button[class='mat-menu-item']");
 	public static By sendImageSubmitButton = By.cssSelector("a[class='borderCircle text-center mat-fab']");
 	public static By chatWithAdminButton = By.cssSelector("a[class='text-center mat-fab']");
+	public static By rightDrawer = By.cssSelector("i[class='zmdi zmdi-more-vert']");
+	public static By rightDrawerOptions = By.cssSelector("div[class='mat-menu-content ng-trigger ng-trigger-fadeInItems']");
 	
 	public static void clickSendMessageTextBox() {
 		BaseClass.waitTillElementVisible(BaseClass.driver, sendMessageTextBox);    
@@ -88,5 +92,27 @@ public class ChatWindow {
 		BaseClass.waitTillElementVisible(BaseClass.driver, chatWithAdminButton);    
     	BaseClass.driver.findElement(chatWithAdminButton).click();
 	}
+	
+	public static void clickRightDrawer() {
+		BaseClass.waitTillElementVisible(BaseClass.driver, rightDrawer);    
+    	BaseClass.driver.findElement(rightDrawer).click();
+	}
+			
+	public static void selectRightDrawerOption(String option) throws Exception {
+		 List<WebElement> options = BaseClass.driver.findElements(rightDrawerOptions);
+		 BaseClass.waitTillElementVisible(BaseClass.driver, rightDrawerOptions);
+		 for(WebElement We : options) {
+			 System.out.println(We.getText());
+		 }
+		 
+		 for(WebElement We : options) {
+			 if(We.getText().equalsIgnoreCase(option)) {
+				 //Thread.sleep(1000);
+				 We.click();
+				 break;
+			 }
+		 }
+	}
+	
 	
 }

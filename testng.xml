@@ -54,5 +54,17 @@
 			<class name="testCases.SendImageToAdmin"></class>
 		</classes>
 	</test>
+	
+	<test name = "Edit Channel Profile">
+		<classes>
+			<class name="testCases.EditChannelProfile"></class>
+		</classes>
+	</test>
+	
+	<test name = "Logout">
+		<classes>
+			<class name="testCases.Logout"></class>
+		</classes>
+	</test>
 		
 </suite>

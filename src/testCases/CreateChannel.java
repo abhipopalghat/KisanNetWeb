@@ -60,7 +60,7 @@ public class CreateChannel {
 			Thread.sleep(1000);
 			
 			EnterChannelInfo.setChannelDescription();
-			EnterChannelInfo.SelectPrivateChannel();
+			EnterChannelInfo.SelectPublicChannel();
 			EnterChannelInfo.clickNextBtn();
 		
 			Categories.selectAgricultureCategory();
