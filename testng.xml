@@ -23,7 +23,7 @@
 		<classes>
 			<class name="testCases.SendTextToFollower"></class>
 		</classes>
-	</test>
+	</test> 
 	
 	<test name = "SendImageToFollower">
 		<classes>
