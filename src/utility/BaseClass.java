@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Screen;
 
 import pageObjects.LoginPage;
 import pageObjects.SelectLanguage;
@@ -21,6 +22,8 @@ public class BaseClass
 	public static WebDriver driver =null;
 	
 	public static Properties prop=new Properties();
+	
+	public static Screen screen = new Screen();
 	
 	
 	public By locatorValue(String locatorTpye, String value) 
@@ -117,12 +120,18 @@ public class BaseClass
 		return wait;
 	}	
 	
-public static WebDriverWait waitTillAlertPresent(WebDriver driver) {
+	public static WebDriverWait waitTillAlertPresent(WebDriver driver) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.alertIsPresent());
 		return wait;
 	}	
 	
+	public static WebDriverWait waitTillElementDisapper(WebDriver driver, By locator) {
+	
+	WebDriverWait wait = new WebDriverWait(driver, 50);
+	wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	return wait;
+}	
 	
 }

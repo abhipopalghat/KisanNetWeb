@@ -3,6 +3,31 @@
 <suite name="Failed suite [Kisan_Net_Web_Automation]">
   <test name="Edit Channel Profile(failed)" preserve-order="true">
     <classes>
+      <class name="testCases.SendImageToAdmin">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendImageToAdmin -->
+      <class name="testCases.SendTextToFollower">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendTextToFollower -->
+      <class name="testCases.CreateChannel">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.CreateChannel -->
+      <class name="testCases.SendImageToFollower">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendImageToFollower -->
+      <class name="testCases.SendTextToAdmin">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendTextToAdmin -->
       <class name="testCases.EditChannelProfile">
         <methods>
           <include name="editChannelProfile"/>
@@ -19,6 +44,36 @@
   </test> <!-- Edit Channel Profile(failed) -->
   <test name="Logout(failed)" preserve-order="true">
     <classes>
+      <class name="testCases.Logout">
+        <methods>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- testCases.Logout -->
+      <class name="testCases.SendImageToAdmin">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendImageToAdmin -->
+      <class name="testCases.SendTextToFollower">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendTextToFollower -->
+      <class name="testCases.CreateChannel">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.CreateChannel -->
+      <class name="testCases.SendImageToFollower">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendImageToFollower -->
+      <class name="testCases.SendTextToAdmin">
+        <methods>
+          <include name="navigateToMyChat"/>
+        </methods>
+      </class> <!-- testCases.SendTextToAdmin -->
       <class name="testCases.EditChannelProfile">
         <methods>
           <include name="navigateToMyChat"/>
@@ -30,11 +85,6 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- testCases.RegisterUser_TC -->
-      <class name="testCases.Logout">
-        <methods>
-          <include name="logout"/>
-        </methods>
-      </class> <!-- testCases.Logout -->
     </classes>
   </test> <!-- Logout(failed) -->
 </suite> <!-- Failed suite [Kisan_Net_Web_Automation] -->

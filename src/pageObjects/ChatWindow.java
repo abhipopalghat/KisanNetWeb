@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Pattern;
 
 import utility.BaseClass;
 
@@ -101,7 +102,9 @@ public class ChatWindow {
 	public static void selectRightDrawerOption(String option) throws Exception {
 		 List<WebElement> options = BaseClass.driver.findElements(rightDrawerOptions);
 		 BaseClass.waitTillElementVisible(BaseClass.driver, rightDrawerOptions);
-		 for(WebElement We : options) {
+		 Pattern channelProfile = new Pattern(BaseClass.prop.getProperty("channelProfileImage"));
+		 BaseClass.screen.click(channelProfile); 
+		 /*for(WebElement We : options) {
 			 System.out.println(We.getText());
 		 }
 		 
@@ -111,7 +114,7 @@ public class ChatWindow {
 				 We.click();
 				 break;
 			 }
-		 }
+		 }*/
 	}
 	
 	

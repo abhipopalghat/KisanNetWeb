@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.sikuli.script.Pattern;
 
 import utility.BaseClass;
 
@@ -45,7 +46,9 @@ public class LoginPage {
 
     public static void clickEnterMobile() throws Exception{
 
-        Thread.sleep(1000);
+        
+        Pattern callButton = new Pattern(BaseClass.prop.getProperty("callButton"));
+        BaseClass.screen.wait(callButton,10000);
     	BaseClass.waitTillElementVisible(BaseClass.driver, enterMobileKisan);    
     	BaseClass.driver.findElement(enterMobileKisan).click();
 

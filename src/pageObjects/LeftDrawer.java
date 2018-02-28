@@ -15,9 +15,11 @@ public class LeftDrawer {
 	public static By logout = By.cssSelector("mat-list-item.pad-tb-sm:nth-child(8) > div:nth-child(1) > a:nth-child(3) > span:nth-child(2)");
 	public static By logoutYesBtn = By.cssSelector("button[class$='btnRed']");
 	public static By logoutNoBtn = By.cssSelector("button[class$='btnBlack']");
+	public static By opacity = By.cssSelector("opacity"); 
 	
 		public static void clickLeftDrawerBtn() {
-			BaseClass.waitTillElementPresent(BaseClass.driver, leftDrawerBtn);    
+			BaseClass.waitTillElementDisapper(BaseClass.driver, opacity);
+			BaseClass.waitTillElementVisible(BaseClass.driver, leftDrawerBtn);    
 	    	BaseClass.driver.findElement(leftDrawerBtn).click();
 		}
 

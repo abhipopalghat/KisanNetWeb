@@ -38,13 +38,14 @@ public class MyChat {
 		return Channels;
 	}
 	
-	public static void clickOnChannelName(String channelType) {
+	public static void clickOnChannelName(String channelType) throws Exception {
 		
 		List <WebElement> Channels = getChannelList();
 		String channelToBeClicked = BaseClass.prop.getProperty(channelType);
 		for(WebElement channelName : Channels) {
 			
 			if(	channelName.getText().equalsIgnoreCase(channelToBeClicked)) {
+				Thread.sleep(2000);
 				channelName.click();
 				break;
 			}

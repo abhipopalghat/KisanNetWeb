@@ -39,7 +39,7 @@ public class EditChannelProfilePage {
     	BaseClass.waitTillElementClickable(BaseClass.driver, photo);
     	BaseClass.driver.findElement(photo).click();
     	Thread.sleep(2000);
-    	BaseClass.driver.findElement(uploadPhoto).click();
+    	//BaseClass.driver.findElement(uploadPhoto).click();  // Feature is not ready in wireframe
     	FileUpload.CopyFilePath("editedChannelProfilePic");
 		FileUpload.PasteFilePath();
 		FileUpload.ClickEnter();

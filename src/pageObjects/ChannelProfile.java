@@ -13,9 +13,9 @@ public class ChannelProfile {
 	public static By channelProfilePic = By.cssSelector("img[class='img-responsive img-circle text-center']");
 	public static By rightDrawer = By.cssSelector("i[class='zmdi zmdi-more-vert']");
 	public static By rightDrawerOptions = By.cssSelector("div[class='mat-menu-content ng-trigger ng-trigger-fadeInItems']");
-	public static By editChannelProfileButton = By.xpath("(//i[@class='zmdi zmdi-edit'])[1]");
+	public static By editChannelProfileButton = By.cssSelector("a[class='borderCircle text-center mat-fab']");
 	
-	
+	 
 	public static void clickRightDrawer() {
 		BaseClass.waitTillElementVisible(BaseClass.driver, rightDrawer);    
     	BaseClass.driver.findElement(rightDrawer).click();
@@ -38,7 +38,7 @@ public class ChannelProfile {
 	}
 	
 	public static void clickEditChannelProfileBtn() throws Exception {
-		BaseClass.waitTillElementPresent(BaseClass.driver, editChannelProfileButton);   
+		BaseClass.waitTillElementVisible(BaseClass.driver, editChannelProfileButton);   
     	BaseClass.driver.findElement(editChannelProfileButton).click();
 	}
 	

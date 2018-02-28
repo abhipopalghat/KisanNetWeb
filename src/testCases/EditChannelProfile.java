@@ -45,6 +45,7 @@ public class EditChannelProfile {
   @AfterClass
   
   public static void navigateToMyChat() throws Exception{
+	  Thread.sleep(1000);
 	  MyChat.navigateToMyChat();
 	}
   
