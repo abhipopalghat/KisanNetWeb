@@ -30,8 +30,9 @@ public class EditUserProfile {
 	  Categories.selectAgri_Finance_And_InsuranceCategory();
 	  Categories.selectAlternate_EnergyCategory();
 	  Categories.clickNext();
+	  
 	  EditUserProfilePage.clickDoneBtn();
-	  Thread.sleep(3000);
+	  Thread.sleep(3500);
 	  /*String getSuccessToast = EditUserProfilePage.getSuccessToast();
 	  System.out.println(getSuccessToast);
 	  */
