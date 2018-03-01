@@ -32,7 +32,7 @@ public class EditUserProfile {
 	  Categories.clickNext();
 	  
 	  EditUserProfilePage.clickDoneBtn();
-	  Thread.sleep(3500);
+	  Thread.sleep(3000);
 	  /*String getSuccessToast = EditUserProfilePage.getSuccessToast();
 	  System.out.println(getSuccessToast);
 	  */
